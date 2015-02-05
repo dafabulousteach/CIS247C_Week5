@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3B1ED64E1A81886B00043264 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1ED64D1A81886B00043264 /* main.cpp */; };
+		3B1ED6561A8188B500043264 /* Employee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1ED6541A8188B500043264 /* Employee.cpp */; };
+		3B1ED6591A8188D000043264 /* Benefits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1ED6571A8188D000043264 /* Benefits.cpp */; };
+		3B1ED65C1A8205E300043264 /* Salaried.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1ED65A1A8205E300043264 /* Salaried.cpp */; };
+		3B1ED65F1A82060000043264 /* Hourly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1ED65D1A82060000043264 /* Hourly.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +28,15 @@
 
 /* Begin PBXFileReference section */
 		3B1ED64A1A81886B00043264 /* Week5Lab_Merino_K */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Week5Lab_Merino_K; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B1ED64D1A81886B00043264 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B1ED64D1A81886B00043264 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3B1ED6541A8188B500043264 /* Employee.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Employee.cpp; sourceTree = "<group>"; };
+		3B1ED6551A8188B500043264 /* Employee.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Employee.h; sourceTree = "<group>"; };
+		3B1ED6571A8188D000043264 /* Benefits.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Benefits.cpp; sourceTree = "<group>"; };
+		3B1ED6581A8188D000043264 /* Benefits.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Benefits.h; sourceTree = "<group>"; };
+		3B1ED65A1A8205E300043264 /* Salaried.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Salaried.cpp; sourceTree = "<group>"; };
+		3B1ED65B1A8205E300043264 /* Salaried.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Salaried.h; sourceTree = "<group>"; };
+		3B1ED65D1A82060000043264 /* Hourly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hourly.cpp; sourceTree = "<group>"; };
+		3B1ED65E1A82060000043264 /* Hourly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hourly.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				3B1ED64D1A81886B00043264 /* main.cpp */,
+				3B1ED6541A8188B500043264 /* Employee.cpp */,
+				3B1ED6551A8188B500043264 /* Employee.h */,
+				3B1ED6571A8188D000043264 /* Benefits.cpp */,
+				3B1ED6581A8188D000043264 /* Benefits.h */,
+				3B1ED65A1A8205E300043264 /* Salaried.cpp */,
+				3B1ED65B1A8205E300043264 /* Salaried.h */,
+				3B1ED65D1A82060000043264 /* Hourly.cpp */,
+				3B1ED65E1A82060000043264 /* Hourly.h */,
 			);
 			path = Week5Lab_Merino_K;
 			sourceTree = "<group>";
@@ -118,7 +138,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1ED6591A8188D000043264 /* Benefits.cpp in Sources */,
+				3B1ED65F1A82060000043264 /* Hourly.cpp in Sources */,
 				3B1ED64E1A81886B00043264 /* main.cpp in Sources */,
+				3B1ED65C1A8205E300043264 /* Salaried.cpp in Sources */,
+				3B1ED6561A8188B500043264 /* Employee.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +233,7 @@
 		3B1ED6531A81886B00043264 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"MTL_ENABLE_DEBUG_INFO[arch=*]" = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
