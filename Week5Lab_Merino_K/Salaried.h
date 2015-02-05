@@ -9,6 +9,7 @@
 #ifndef __Week5Lab_Merino_K__Salaried__
 #define __Week5Lab_Merino_K__Salaried__
 #include "Employee.h"
+#include "Benefits.h"
 #include <string>
 #include <iostream>
 #include <stdio.h>
@@ -25,6 +26,7 @@ private:
     
 public:
     Salaried();
+    Salaried(string fname, string lname, char gen, int dep, double sal, Benefits ben, int manLevel);
     ~Salaried();
 };
 
