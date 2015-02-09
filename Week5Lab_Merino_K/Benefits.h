@@ -6,8 +6,8 @@
  * Program Description: This program accepts input from an employee and displays the information entered.
  */
 
-#ifndef __Week4Lab_Merino__Benefits__
-#define __Week4Lab_Merino__Benefits__
+#ifndef __Week5Lab_Merino__Benefits__
+#define __Week5Lab_Merino__Benefits__
 #include<string>
 #include<iostream>
 #include<stdio.h>

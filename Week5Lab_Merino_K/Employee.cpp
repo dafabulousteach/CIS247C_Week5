@@ -9,6 +9,7 @@
 #define Week2Lab_Merino_Employee_h
 #include "Employee.h"
 #include "Benefits.h"
+#include "Salaried.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -17,10 +18,11 @@
 
 using namespace std;
 Benefits benefit;
-Benefits benefit1("North West Mutual", 50000000, 14);
+Benefits benefit1("PPO", 100, 200);
 Employee::Employee()
 {
     this -> firstName="not given";
+    strncpy(gender, "U", 1);
     this -> dependents=0;
     this -> annualSalary=20000;
     numEmployees++;
@@ -28,13 +30,12 @@ Employee::Employee()
 
 int Employee::numEmployees = 0;
 
-Employee::Employee(string first, string last, char gen, int dep, double salary, Benefits benefit1){
+Employee::Employee(string first, string last, char gen, int dep, double salary, Benefits benefit1 ){
     firstName = first;
     lastName = last;
-    gender = gen;
+    gender[0] = gen;
     dependents = dep;
     annualSalary = salary;
-    // healthinsurance = health;
     numEmployees++;
 }
 
@@ -72,7 +73,7 @@ void Employee::setGender(char gen){
 
 char Employee::getGender(){
     
-    return gender;
+    return gender[0];
 }
 
 void Employee::setDependents(int dep){
@@ -81,7 +82,7 @@ void Employee::setDependents(int dep){
     cin >> dependents;
 }
 
-void Employee::setDependents(string dep){ // NEW OVERLOADED METHOD
+void Employee::setDependents(string dep){
     cout << "Please enter your Dependents: ";
     cin >> dependents;
 }
@@ -96,7 +97,7 @@ void Employee::setAnnualSalary(double salary){
     cin >> annualSalary;
 }
 
-void Employee::setAnnualSalary(string salary){ // NEW OVERLOADED METHOD
+void Employee::setAnnualSalary(string salary){
     ostringstream s;
     cout << "Please enter your Annual Salary: ";
     cin >> annualSalary;
@@ -109,6 +110,7 @@ double Employee::getAnnualSalary(){
 double Employee::calculatePay(){
     
     return annualSalary/52;
+    
 }
 
 int Employee::getNumEmployees(){
@@ -125,9 +127,6 @@ void Employee::displayEmployee(){
     cout << "Name:\t" << firstName << " " << lastName + "\n";
     cout << "Gender:\t" << gender << "\n";
     cout << "Dependents:\t" << dependents << "\n";
-    cout << "Annual Salary:\t" << setprecision(2) << showpoint << fixed << annualSalary << "\n";
-    cout << "Weekly Salary:\t" << calculatePay() << "\n";
-    cout << "\n";
     benefit.displayBenefits();
     }
 

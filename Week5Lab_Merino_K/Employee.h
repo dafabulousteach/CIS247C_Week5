@@ -5,16 +5,14 @@
  * Employee Header File
  * Program Description: This program accepts input from an employee and displays the information entered.
  */
-
+#ifndef __Week5Lab_Merino__Employee__
+#define __Week5Lab_Merino__Employee__
 #include<string>
 #include<iostream>
-
-using namespace std;
 #include "Benefits.h"
 
-class IEmployee {
-    virtual double calculatePay() = 0;
-};
+
+using namespace std;
 
 class Employee
 {
@@ -41,15 +39,15 @@ public:
     void setAnnualSalary(double salary);
     static int getNumEmployees();
     Benefits benefit;
-    Benefits benefit1(string health, double life, int vac);
     
     // private members
-private:
+protected:
     string firstName;
     string lastName;
-    char gender;
+    char gender[1];
     int dependents;
     double annualSalary;
     static int numEmployees;
 }; // End of Employee class
+#endif
 

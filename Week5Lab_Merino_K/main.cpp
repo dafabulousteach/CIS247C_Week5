@@ -5,10 +5,12 @@
  * Employee Main Program
  * Program Description: This program accepts input from an employee and displays the informtion entered.
  */
-#ifndef Week4Lab_Merino_Benefits_h
-#define Week4Lab_Merino_Benefits_h
+#ifndef Week5Lab_Merino_Benefits_h
+#define Week5Lab_Merino_Benefits_h
 #include "Benefits.h"
 #include "Employee.h"
+#include "Salaried.h"
+#include "Hourly.h"
 #include <iostream>
 #include <string>
 #endif
@@ -16,14 +18,16 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    Benefits benefit1("North West Mutual", 50000000, 14);
-    Employee e1, e2("Mary", "Noia", 'F', 5, 24000.0, benefit1);
+    Benefits benefit1("PPO", 100, 200);
+    Benefits benefit2("PPO", 5, 17); // can this be removed?
+    Employee e1;
+    Salaried s1(50000, 3);
+    
     
     cout << "Welcome to your first Object-Oriented Program\nEmployee Class 247C, Week 5 Lab\n";
     cout << "Name: Kim Merino\n";
-    
+    /*
     // Employee #1 User Input
-    
     e1.setFirstName(" ");
     e1.setLastName(" ");
     e1.setGender(0);
@@ -32,11 +36,26 @@ int main(int argc, char *argv[]) {
     e1.benefit.setHealthInsurance(" ");
     e1.benefit.setLifeInsurance(0);
     e1.benefit.setVacation(0);
-    e1.displayEmployee();
     
-    // Employee #2
-    e2.displayEmployee();
+    e1.displayEmployee();
 
+     
+    // Salaried Employee
+    
+    s1.setFirstName("   ");
+    s1.setLastName(" ");
+    s1.setGender(' ');
+    s1.setDependents(" ");
+    s1.benefit.setHealthInsurance(" ");
+    s1.benefit.setLifeInsurance(' ');
+    s1.benefit.setVacation(' ');
+    s1.calculatePay();
+    s1.displayEmployee();
+    */
+    // Hourly Object
+    Hourly h1("James", "Bond", 'M', 0, 40, 50, benefit2, "part-time");
+    h1.displayEmployee();
+    
     Employee::getNumEmployees();
     cout << "The end of the CIS 247C Week 5 iLab\n";
     

@@ -22,8 +22,8 @@ Benefits::Benefits()
 
 Benefits::Benefits(string health, double life, int vac){
     healthinsurance = health;
-    lifeinsurance=life;
-    vacation=vac;
+    lifeinsurance = life;
+    vacation = vac;
 }
 
 Benefits::~Benefits(){}
